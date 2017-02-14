@@ -12,5 +12,18 @@
 
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+describe User, type: :model do
+  it 'has valid factory' do
+    expect(build(:user)).to be_valid
+  end
+
+  it 'is invalid without name' do
+    user = build(:user, name: nil)
+    expect(user).not_to be_valid
+  end
+
+  it 'is invalid without password' do
+    user = build(:user, password: nil)
+    expect(user).not_to be_valid
+  end
 end
