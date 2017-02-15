@@ -17,6 +17,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
-  validates :passowrd, length: { minimum: 4 }, if: -> { new_record? || changes[:crypted_password] }
+  validates :password, length: { minimum: 4 }, if: -> { new_record? || changes[:crypted_password] }
   validates :email, uniqueness: true
 end
