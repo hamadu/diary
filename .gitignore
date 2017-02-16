@@ -19,3 +19,4 @@
 # node
 /node_modules/**/*
 /public/assets/**
+/npm-debug.log

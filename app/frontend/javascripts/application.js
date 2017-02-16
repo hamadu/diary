@@ -1,5 +1,14 @@
-const x = 10;
-console.log(10);
+/**
+ * Import Twitter bootstrap
+ */
+ require('../../../node_modules/bootstrap/dist/css/bootstrap.min.css');
+ require('../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css');
+ require('../../../node_modules/font-awesome/css/font-awesome.css');
 
-const y = [1,2,3,4,5,6];
-y.forEach(xi => console.log(xi));
+// require('bootstrap-sass/assets/javascripts/bootstrap');
+// require('font-awesome-sass-loader');
+
+/**
+ * Import stylesheet
+ */
+// require('../stylesheets/application');

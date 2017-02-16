@@ -3,9 +3,9 @@
   <head>
     <title>App</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    webpack_asset_path('app.css'), media: 'all' %>
+    <%= javascript_include_tag webpack_asset_path('app.js') %>
   </head>
 
   <body>
@@ -22,7 +22,12 @@
       <p id="notice"><%= flash[:notice] %></p>
       <p id="alert"><%= flash[:alert] %></p>
     </div>
-    
+
+
     <%= yield %>
+
+    <button class="btn btn-primary fa fa-power-off">
+      ほげ
+    </button>
   </body>
 </html>
