@@ -12,7 +12,6 @@ RUN npm install n -g
 RUN n stable
 RUN apt-get purge -y nodejs npm # remove old nodes
 
-
 ENV INSTALL_PATH /app
 ENV LANG C.UTF-8
 RUN mkdir $INSTALL_PATH
