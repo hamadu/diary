@@ -12,8 +12,8 @@
 
 FactoryGirl.define do
   factory :article do
-    title "MyString"
-    body "MyText"
-    publish_on "2017-02-19 09:13:18"
+    title 'たいとる'
+    body 'ほんぶん'
+    publish_on '2017-02-19 09:13:18'
   end
 end

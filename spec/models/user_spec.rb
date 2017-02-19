@@ -17,17 +17,28 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it 'has valid factory' do
-    expect(build(:user)).to be_valid
-  end
+  describe 'validation' do
+    it 'has valid factory' do
+      expect(build(:user)).to be_valid
+    end
 
-  it 'is invalid without name' do
-    user = build(:user, name: nil)
-    expect(user).not_to be_valid
-  end
+    it 'is invalid without email' do
+      user = build(:user, email: nil)
+      expect(user).not_to be_valid
+    end
 
-  it 'is invalid without password' do
-    user = build(:user, password: nil)
-    expect(user).not_to be_valid
+    it 'is invalid without password' do
+      user = build(:user, password: nil)
+      expect(user).not_to be_valid
+    end
+
+    context 'same email user already exists' do
+      before { create(:user) }
+
+      it 'is invalid without password' do
+        another_user = build(:user)
+        expect(another_user).not_to be_valid
+      end
+    end
   end
 end
