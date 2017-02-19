@@ -1,2 +1,2 @@
 node: npm run-script dev
-web: bundle exec rails s -b '0.0.0.0'
+web: rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'
