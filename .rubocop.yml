@@ -1,0 +1,8 @@
+Rails:
+  Enabled: true
+
+Metrics/BlockLength:
+  Max: 50
+
+Metrics/LineLength:
+  Max: 160
