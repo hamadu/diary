@@ -1,2 +1,3 @@
 node: npm run-script dev
-web: rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'
+spring: bin/spring server
+web: rm -f tmp/pids/server.pid && bin/rails s -b '0.0.0.0'
