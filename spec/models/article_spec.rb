@@ -13,5 +13,19 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'validation' do
+    it 'has valid factory' do
+      expect(build(:article)).to be_valid
+    end
+
+    it 'is invalid without title' do
+      article = build(:article, title: nil)
+      expect(article).not_to be_valid
+    end
+
+    it 'is invalid without publish_on' do
+      article = build(:article, publish_on: nil)
+      expect(article).not_to be_valid
+    end
+  end
 end
