@@ -21,12 +21,10 @@
     <div>
       <p id="notice"><%= flash[:notice] %></p>
       <p id="alert"><%= flash[:alert] %></p>
-    </div> 
+    </div>
 
-    <%= yield %>
-
-    <button class="btn btn-primary fa fa-power-off">
-      ほげ
-    </button>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

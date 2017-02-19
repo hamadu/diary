@@ -5,16 +5,18 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Articles.all
+    @articles = Article.all
   end
 
   # GET /articles/1
   # GET /articles/1.json
-  def show; end
+  def show
+
+  end
 
   # GET /articles/new
   def new
-    @user = User.new
+    @user = Article.new
   end
 
   private
