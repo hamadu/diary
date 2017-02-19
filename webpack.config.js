@@ -62,6 +62,7 @@ module.exports = {
   },
   resolve: {
     modules: [
+      path.join(__dirname, 'node_modules'),
       path.join(__dirname, 'app', 'frontend')
     ],
     extensions: ['.js', '.css', '.scss', '.sass']

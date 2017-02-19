@@ -1,12 +1,13 @@
 /**
  * Import Twitter bootstrap
  */
- require('../../../node_modules/bootstrap/dist/css/bootstrap.min.css');
- require('../../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css');
- require('../../../node_modules/font-awesome/css/font-awesome.css');
+require('bootstrap/dist/css/bootstrap.min.css');
+require('bootstrap/dist/css/bootstrap-theme.min.css');
+require('font-awesome/css/font-awesome.css');
 
-// require('bootstrap-sass/assets/javascripts/bootstrap');
-// require('font-awesome-sass-loader');
+import Editor from './articles/edit';
+
+window.editor = new Editor();
 
 /**
  * Import stylesheet
